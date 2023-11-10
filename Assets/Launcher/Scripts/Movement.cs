@@ -31,12 +31,12 @@ public class Movement : MonoBehaviour
     {
         activeScene = SceneManager.GetActiveScene();
 
-        if(Input.GetKeyDown(KeyCode.W) && IsGrounded())
+       /* if(Input.GetMouseButtonDown(0))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
+        }*/
 
-        if(Input.GetKeyDown(KeyCode.W) && rb.velocity.y > 0f)
+        if(Input.GetMouseButtonDown(0) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -72,7 +72,6 @@ public class Movement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-        
     }
 
     public bool facingRight()
