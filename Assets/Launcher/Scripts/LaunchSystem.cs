@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LaunchSystem : MonoBehaviour
 {
+    [SerializeField] private GameObject playerLaunch;
+    [SerializeField] private Transform launchTransform;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float launchPower = 16f;
@@ -31,6 +33,7 @@ public class LaunchSystem : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Instantiate(playerLaunch, launchTransform);
             rb.AddForce(new Vector2(angle * XPower, angle * YPower));
         }
     }
