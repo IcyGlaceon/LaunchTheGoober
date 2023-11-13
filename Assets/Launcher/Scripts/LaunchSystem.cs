@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class LaunchSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject playerLaunch;
+    [SerializeField] private GameObject player;
     [SerializeField] private Transform launchTransform;
 
     [SerializeField] private Rigidbody2D rb;
+
     [SerializeField] private float launchPower = 16f;
 
-    [SerializeField] private float XPower = 2;
-    [SerializeField] private float YPower = 2;
+    [SerializeField] private float xpower = 2;
+    [SerializeField] private float ypower = 2;
 
 
     // Start is called before the first frame update
@@ -33,8 +34,10 @@ public class LaunchSystem : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(playerLaunch, launchTransform);
-            rb.AddForce(new Vector2(angle * XPower, angle * YPower));
+            var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
+
+            rb.AddForce(Vector2.up * ypower);
+            rb.AddForce(Vector2.right * xpower);
         }
     }
 }
