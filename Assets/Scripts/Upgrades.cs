@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Upgrades : MonoBehaviour
 {
-    public int GooberHits = 1;
-    public float CannonPower = 1;
-    public int Durability = 1;
-    public float PowerUpFrequency = 1;
-    public float ScoreMultiplier = 1;
+    public static int GooberHits = 1;
+	public static float CannonPower = 1;
+	public static int Durability = 1;
+	public static float PowerUpFrequency = 1;
+	public static float ScoreMultiplier = 1;
 
     public void GooberHitsBuy ()
     {

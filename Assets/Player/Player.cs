@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class Player : MonoBehaviour
 {
     // Upgrades
-    public int GooberHits = 1;
-    public int Durability = 1;
-	public float ScoreMultiplier = 1;
+    public int GooberHits = Upgrades.GooberHits;
+    public int Durability = Upgrades.Durability;
+	private float ScoreMultiplier = Upgrades.ScoreMultiplier;
 
     // Dabloons
     public int Dabloons = 0;
 
     public void AddDabloons ()
     {
-        Dabloons += 0; /* !!!THIS NEEDS TO BE CHANGED!!! */
+        int score = (int)CalculateScore();
+
+        Dabloons += score; /* !!!THIS NEEDS TO BE CHANGED!!! */
     }
 
-    public void CalculateScore ()
+    public float CalculateScore ()
     {
         float score = 0 * ScoreMultiplier; /* !!!THIS NEEDS TO BE CHANGED!!! */
+        return score;
 	}
 
 
