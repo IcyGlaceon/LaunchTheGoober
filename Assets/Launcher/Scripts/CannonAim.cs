@@ -6,8 +6,6 @@ public class CannonAim : MonoBehaviour
 {
     [SerializeField] private Transform cannonTransform;
 
-    [SerializeField]LaunchSystem launch;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +23,5 @@ public class CannonAim : MonoBehaviour
 
         var angle = Mathf.Atan2(ScreenPos.y, ScreenPos.x) * Mathf.Rad2Deg;
         cannonTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
-        launch.Launcher(angle);
     }
 }

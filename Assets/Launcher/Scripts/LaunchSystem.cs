@@ -18,26 +18,17 @@ public class LaunchSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       /* if (Input.GetMouseButtonDown(0))
-        {
-            rb.AddForce(new Vector2(launchPower * XPower, launchPower * YPower));
-        }*/
-    }
-
-    public void Launcher(float angle)
-    {
         if (Input.GetMouseButtonDown(0))
         {
             var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
-
-            rb.AddForce(Vector2.up * ypower);
-            rb.AddForce(Vector2.right * xpower);
+            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
+            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
         }
     }
 }
