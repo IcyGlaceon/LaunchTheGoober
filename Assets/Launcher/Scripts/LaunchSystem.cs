@@ -5,15 +5,13 @@ using UnityEngine;
 public class LaunchSystem : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform launchTransform;
+    [SerializeField] private GameObject launchObject;
 
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float launchPower = 16f;
 
-    [SerializeField] private float xpower = 2;
-    [SerializeField] private float ypower = 2;
-
+    [SerializeField] private float xpower = 1000;
+    [SerializeField] private float ypower = 800;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +22,11 @@ public class LaunchSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            //print(launchTransform.position);
         if (Input.GetMouseButtonDown(0))
-        {
-            var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
+        {            
+            var goob = Instantiate(player, launchObject.transform.position, launchObject.transform.rotation);
+
             goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
             goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
         }
