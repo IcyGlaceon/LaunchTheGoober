@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class LaunchSystem : MonoBehaviour
     [SerializeField] private float xpower = 2;
     [SerializeField] private float ypower = 2;
 
+    private bool fired = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +28,13 @@ public class LaunchSystem : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
-            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
-            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
+            if (!fired)
+            {
+                var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
+                fired = true;
+            }
         }
     }
 }
