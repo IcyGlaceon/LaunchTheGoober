@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4782157743817157891}
-  - component: {fileID: 2834868702481159914}
   - component: {fileID: 6887885987976878889}
   m_Layer: 0
   m_Name: Cannon
@@ -35,20 +34,6 @@ Transform:
   - {fileID: 5983859214918078969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2834868702481159914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2657652578902396903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad0432f2a20f3044a9d1502f0af5456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cannonTransform: {fileID: 4782157743817157891}
-  launchTransform: {fileID: 5395861891900890581, guid: a416240fbc3fd5a46ac9ee2cfa763f41, type: 3}
 --- !u!114 &6887885987976878889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +49,8 @@ MonoBehaviour:
   player: {fileID: 6951690903222527264, guid: 596e5815fed07e94e95d278998615e98, type: 3}
   launchObject: {fileID: 2657652578902396903}
   rb: {fileID: 8481612729733506538, guid: 596e5815fed07e94e95d278998615e98, type: 3}
+  launchTransform: {fileID: 5983859214918078969}
+  cannonTransform: {fileID: 4782157743817157891}
   xpower: 1000
   ypower: 800
 --- !u!1 &4907267256613513150
