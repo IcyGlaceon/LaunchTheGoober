@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5395861891900890581}
   - component: {fileID: 1837448852543727253}
-  - component: {fileID: 4750033553239163076}
+  - component: {fileID: 2074328421390472715}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5012769749904968574}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1, y: 0.28, z: 0}
+  m_LocalRotation: {x: 0.31763887, y: -0.631748, z: 0.31763887, w: 0.631748}
+  m_LocalPosition: {x: -0.5954407, y: -0.80339926, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4750033553239163076
+--- !u!114 &2074328421390472715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5012769749904968574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c518a152798ff434199ad5bf785055d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad0432f2a20f3044a9d1502f0af5456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cannonTransform: {fileID: 4782157743817157891, guid: 2b055048143cd094292f9110de2f613e, type: 3}
+  launchTransform: {fileID: 5395861891900890581}

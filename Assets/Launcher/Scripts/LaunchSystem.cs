@@ -5,30 +5,46 @@ using UnityEngine;
 public class LaunchSystem : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform launchTransform;
+    [SerializeField] private GameObject launchObject;
 
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float launchPower = 16f;
+    [SerializeField] private Transform launchTransform;
+    [SerializeField] private Transform cannonTransform;
 
-    [SerializeField] private float xpower = 2;
-    [SerializeField] private float ypower = 2;
+    private Vector3 velocity;
 
+    [SerializeField] private float xpower = 1000;
+    [SerializeField] private float ypower = 800;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 ScreenPos = Camera.main.WorldToScreenPoint(mousePos);
+
+
+        // look at
+        transform.LookAt(mousePos);
+
+        var angle = Mathf.Atan2(ScreenPos.y, ScreenPos.x) * Mathf.Rad2Deg;
+        cannonTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        velocity = mousePos - launchTransform.position;
+
         if (Input.GetMouseButtonDown(0))
-        {
-            var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
-            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
-            goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
+        {            
+            var goob = Instantiate(player, launchObject.transform.position, launchObject.transform.rotation);
+
+            rb = goob.GetComponent<Rigidbody2D>();
+
+            rb.AddForce(velocity);
         }
     }
 }

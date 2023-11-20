@@ -5,6 +5,7 @@ using UnityEngine;
 public class CannonAim : MonoBehaviour
 {
     [SerializeField] private Transform cannonTransform;
+    [SerializeField] private Transform launchTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -15,13 +16,18 @@ public class CannonAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
+       /* Vector3 mousePos = Input.mousePosition;
         Vector3 ScreenPos = Camera.main.WorldToScreenPoint(mousePos);
 
         mousePos.x -= ScreenPos.x;
         mousePos.y -= ScreenPos.y;
 
+        launchTransform.LookAt(mousePos);
+
+
         var angle = Mathf.Atan2(ScreenPos.y, ScreenPos.x) * Mathf.Rad2Deg;
-        cannonTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        cannonTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));*/
     }
+
+
 }
