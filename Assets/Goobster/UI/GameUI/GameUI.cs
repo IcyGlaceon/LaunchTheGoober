@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    //[SerializeField] private Player player;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI hitsText;
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = player.CalculateScore().ToString();
-        hitsText.text = player.GooberHits.ToString();
+        scoreText.text = gameManager.score.ToString();
+        hitsText.text = gameManager.hits.ToString();
     }
 }
