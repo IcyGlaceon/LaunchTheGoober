@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8481612729733506538}
   - component: {fileID: 4899148586943954564}
   - component: {fileID: -3475887814122447490}
+  - component: {fileID: -4156664124438759355}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Player
@@ -164,3 +165,15 @@ MonoBehaviour:
   GooberHits: 1
   Durability: 1
   Dabloons: 0
+--- !u!114 &-4156664124438759355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951690903222527264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc6a5566f7ba043874c8cb5e179a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
