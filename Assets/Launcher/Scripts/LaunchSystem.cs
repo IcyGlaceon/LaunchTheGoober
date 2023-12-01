@@ -1,4 +1,5 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class LaunchSystem : MonoBehaviour
     [SerializeField] private float xpower = 1000;
     [SerializeField] private float ypower = 800;
     private bool fired = false;
+
+    private GameObject goob;
 
     // Start is called before the first frame update
     void Start()
