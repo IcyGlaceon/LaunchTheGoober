@@ -12,27 +12,47 @@ public class Upgrades : MonoBehaviour
 
     public void GooberHitsBuy ()
     {
-        GooberHits += 1;
+        if (Player.Dabloons >= 100)
+        {
+            Player.Dabloons -= 100;
+		    GooberHits += 1;
+        }
     }
 
     public void CannonPowerBuy ()
     {
-        CannonPower += 0.5f;
+        if (Player.Dabloons >= 100)
+        {
+			Player.Dabloons -= 100;
+			CannonPower += 0.5f;
+		}
     }
 
     public void DurabilityBuy ()
     {
-        Durability += 1;
+        if (Player.Dabloons >= 100)
+        {
+			Player.Dabloons -= 100;
+			Durability += 1;
+		}
     }
 
     public void PowerUpFrequencyBuy ()
     {
-        PowerUpFrequency += 0.2f;
+        if (Player.Dabloons >= 50)
+        {
+			Player.Dabloons -= 50;
+			PowerUpFrequency += 0.2f;
+		}
     }
 
     public void ScoreMultiplierBuy()
     {
-        ScoreMultiplier += 0.1f;
+        if (Player.Dabloons >= 300)
+        {
+			Player.Dabloons -= 300;
+			ScoreMultiplier += 0.1f;
+		}
     }
 
 }

@@ -13,12 +13,16 @@ public class Player : MonoBehaviour
     
 
     // Dabloons
-    public int Dabloons = 0;
+    public static int Dabloons = 0;
+
+    public Vector2 StartPOS = Vector2.zero;
+    public Vector2 EndPOS = Vector2.zero;
 
     private void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
+
+        rb.position = StartPOS;
     }
 
     public void AddDabloons ()
@@ -30,7 +34,8 @@ public class Player : MonoBehaviour
 
     public float CalculateScore ()
     {
-        float score = 0 * ScoreMultiplier; /* !!!THIS NEEDS TO BE CHANGED!!! */
+        rb.position = EndPOS;
+        float score = (EndPOS.x - StartPOS.x) * ScoreMultiplier; /* !!!THIS NEEDS TO BE CHANGED!!! */
         return score;
 	}
 
