@@ -34,6 +34,7 @@ public class LaunchSystem : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         Vector3 ScreenPos = Camera.main.WorldToScreenPoint(mousePos);
 
+
         // look at
         transform.LookAt(mousePos);
 
@@ -45,21 +46,11 @@ public class LaunchSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (!fired)
-            {                
-                goob = Instantiate(player, launchObject.transform.position, launchObject.transform.rotation);
-
-                rb = goob.GetComponent<Rigidbody2D>();
-
-                rb.AddForce(velocity);
-
-                //goob.transform.SetParent(Camera.main.transform);
-                fired = true;
-            }
-
-            while (fired)
             {
-                Console.WriteLine(goob.transform);
-                //Camera.main.transform.parent = goob.transform;
+                var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
+                fired = true;
             }
         }
     }
