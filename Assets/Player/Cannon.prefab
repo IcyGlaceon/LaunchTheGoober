@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6951690903222527264, guid: 596e5815fed07e94e95d278998615e98, type: 3}
-  launchObject: {fileID: 2657652578902396903}
+  launchObject: {fileID: 8617031594387964669}
   rb: {fileID: 8481612729733506538, guid: 596e5815fed07e94e95d278998615e98, type: 3}
   launchTransform: {fileID: 5983859214918078969}
   cannonTransform: {fileID: 4782157743817157891}
@@ -146,6 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5983859214918078969}
+  - component: {fileID: 509483840644397050}
   m_Layer: 0
   m_Name: Launch
   m_TagString: Untagged

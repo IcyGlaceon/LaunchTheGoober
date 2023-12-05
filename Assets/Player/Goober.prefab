@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3475887814122447490}
   - component: {fileID: -4156664124438759355}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Goober
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2c338c11803ebf243a8efc9a374ff8a9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -164,7 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GooberHits: 1
   Durability: 1
-  Dabloons: 0
+  player: {fileID: 6951690903222527264}
+  Spikes: {fileID: 2770027822815206159, guid: 3138c3caff20212418fdf50013c137c9, type: 3}
+  StartPOS: {x: 0, y: 0}
+  EndPOS: {x: 0, y: 0}
 --- !u!114 &-4156664124438759355
 MonoBehaviour:
   m_ObjectHideFlags: 0

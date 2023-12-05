@@ -47,9 +47,16 @@ public class LaunchSystem : MonoBehaviour
         {
             if (!fired)
             {
-                var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
+                /*var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
                 goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
-                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);*/ 
+
+                goob = Instantiate(player, launchObject.transform.position, launchObject.transform.rotation);
+
+                rb = goob.GetComponent<Rigidbody2D>();
+
+                rb.AddForce(velocity);
+
                 fired = true;
             }
         }
