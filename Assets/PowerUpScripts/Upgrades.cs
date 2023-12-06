@@ -24,7 +24,7 @@ public class Upgrades : MonoBehaviour
         if (Player.Dabloons >= 100)
         {
 			Player.Dabloons -= 100;
-			CannonPower += 0.5f;
+			CannonPower += 0.1f;
 		}
     }
 

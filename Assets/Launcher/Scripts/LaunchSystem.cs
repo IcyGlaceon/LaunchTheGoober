@@ -42,7 +42,7 @@ public class LaunchSystem : MonoBehaviour
 
         velocity = mousePos - launchTransform.position;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if (!fired)
             {
@@ -56,7 +56,7 @@ public class LaunchSystem : MonoBehaviour
 
                 rb = goob.GetComponent<Rigidbody2D>();
 
-                rb.AddForce(velocity * launchPower);
+                rb.AddForce(velocity * (launchPower + Upgrades.CannonPower));
 
                 fired = true;
             }
