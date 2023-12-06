@@ -42,7 +42,7 @@ public class LaunchSystem : MonoBehaviour
 
         velocity = mousePos - launchTransform.position;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if (!fired)
             {
