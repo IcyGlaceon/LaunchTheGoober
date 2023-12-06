@@ -232,6 +232,7 @@ MonoBehaviour:
   Durability: 1
   player: {fileID: 6951690903222527264}
   Spikes: {fileID: 2770027822815206159, guid: 3138c3caff20212418fdf50013c137c9, type: 3}
+  dragPower: 2
   StartPOS: {x: 0, y: 0}
   EndPOS: {x: 0, y: 0}
 --- !u!114 &-4156664124438759355
@@ -253,7 +254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6951690903222527264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f580ab3339e8f7246bcc90c8c4f30457, type: 3}
   m_Name: 

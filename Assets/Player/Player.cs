@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject Spikes;
 
+    public float dragPower = 1;
+
     // Dabloons
     public static int Dabloons = 0;
 
@@ -51,12 +53,12 @@ public class Player : MonoBehaviour
         //checks if the player is below y of 0
         if (player.gameObject.transform.up.y <= new Vector3(0,0,0).y && rb.velocity.x > 0)
         {
-            rb.AddForce(negativeXForce);
+            rb.AddForce(negativeXForce * dragPower);
         }
 
-        if(rb.velocity.x == 0)
+        if(rb.velocity.x <= 0)
         {
-            rb.velocity.Set(0, 0);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         
