@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &65296917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 780035642504535842, guid: 1b63cad30af7c7e4289549f5cac8b01e, type: 3}
+  m_PrefabInstance: {fileID: 1814532373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &218092300
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +218,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &310793644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2367227235257854357, guid: 1b63cad30af7c7e4289549f5cac8b01e, type: 3}
+  m_PrefabInstance: {fileID: 1814532373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &492615360
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +844,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &888775737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 173377660495663222, guid: 980f095bd0059034ba53ae184e13073b, type: 3}
+  m_PrefabInstance: {fileID: 2644734396886037211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022a8603e768d0e4ca09b294f3ea845d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228322371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2435452046563345955, guid: 1b63cad30af7c7e4289549f5cac8b01e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2609900435517651176, guid: 1b63cad30af7c7e4289549f5cac8b01e, type: 3}
       propertyPath: m_Pivot.x
@@ -1287,9 +1320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dc756af68daa247b37206876035243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  scoreText: {fileID: 0}
-  hitsText: {fileID: 0}
+  gameManager: {fileID: 888775737}
+  scoreText: {fileID: 65296917}
+  hitsText: {fileID: 310793644}
 --- !u!1 &1834313349
 GameObject:
   m_ObjectHideFlags: 0

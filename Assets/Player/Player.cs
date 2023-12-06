@@ -55,6 +55,9 @@ public class Player : MonoBehaviour
         if(rb.velocity.x == 0)
         {
             rb.velocity.Set(0, 0);
+
+
+
         }
 
         
