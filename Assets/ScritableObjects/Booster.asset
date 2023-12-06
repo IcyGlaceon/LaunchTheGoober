@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f12638c359d88c44bb1e9b4e6b0a84eb, type: 3}
-  m_Name: Fan
+  m_Name: Booster
   m_EditorClassIdentifier: 
-  verticleAcceloration: 10
-  horizontalAcceloration: 3
+  verticleAcceloration: 3
+  horizontalAcceloration: 10
   speed: 4
