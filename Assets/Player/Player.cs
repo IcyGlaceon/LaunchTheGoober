@@ -1,4 +1,6 @@
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject Spikes;
+
+    private float endTimer = 3;
 
     public float dragPower = 1;
 
@@ -59,6 +63,10 @@ public class Player : MonoBehaviour
         if(rb.velocity.x <= 0)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            if (endTimer <= 0) SceneManager.LoadScene(0);
+
+            endTimer--;
         }
 
         
