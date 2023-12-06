@@ -56,7 +56,7 @@ public class LaunchSystem : MonoBehaviour
 
                 rb = goob.GetComponent<Rigidbody2D>();
 
-                rb.AddForce(velocity * launchPower);
+                rb.AddForce(velocity * (launchPower + Upgrades.CannonPower));
 
                 fired = true;
             }

@@ -959,7 +959,7 @@ MonoBehaviour:
   rb: {fileID: 8481612729733506538, guid: 596e5815fed07e94e95d278998615e98, type: 3}
   launchTransform: {fileID: 1916230313}
   cannonTransform: {fileID: 1281898488}
-  launchPower: 2
+  launchPower: 0.1
 --- !u!4 &1281898488
 Transform:
   m_ObjectHideFlags: 0
