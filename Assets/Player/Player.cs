@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
 
 	private float ScoreMultiplier = Upgrades.ScoreMultiplier;
 
-    //LaunchSystem launchSys;
-
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject Spikes;
 
@@ -27,7 +25,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        //rb.position = StartPOS;
+        rb.position = StartPOS;
     }
 
     public void AddDabloons ()

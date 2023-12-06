@@ -14,10 +14,10 @@ public class LaunchSystem : MonoBehaviour
     [SerializeField] private Transform launchTransform;
     [SerializeField] private Transform cannonTransform;
 
-    Vector3 velocity;
+    private Vector3 velocity;
 
-    [SerializeField]float launchPower = 1;
-
+    [SerializeField] private float xpower = 1000;
+    [SerializeField] private float ypower = 800;
     private bool fired = false;
 
     private GameObject goob;
@@ -34,6 +34,7 @@ public class LaunchSystem : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         Vector3 ScreenPos = Camera.main.WorldToScreenPoint(mousePos);
 
+
         // look at
         transform.LookAt(mousePos);
 
@@ -48,15 +49,13 @@ public class LaunchSystem : MonoBehaviour
             {
                 /*var goob = Instantiate(player, launchTransform.position, launchTransform.rotation);
                 goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * ypower);
-                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);*/
+                goob.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * xpower);*/ 
 
-                launchTransform.RotateAround(cannonTransform.position, new Vector3(0, 0, 1), angle);
-
-                goob = Instantiate(player, launchObject.transform.localPosition, launchObject.transform.rotation);
+                goob = Instantiate(player, launchObject.transform.position, launchObject.transform.rotation);
 
                 rb = goob.GetComponent<Rigidbody2D>();
 
-                rb.AddForce(velocity * launchPower);
+                rb.AddForce(velocity);
 
                 fired = true;
             }
